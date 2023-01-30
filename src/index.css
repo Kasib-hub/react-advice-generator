@@ -1,13 +1,115 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+/* you can add google fonts this way as well */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 93%, 58%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* padding on body and then the container space them from boundaries of screen and container */
+body {
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  background-color: var(--dark-blue);
+  padding: 1.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 1.25rem;
+}
+
+/* line height gives more space between lines of text */
+p {
+  font-size: 28px;
+  line-height: 1.5;
+}
+
+/* 1rem = 16px */
+.container {
+  background-color: var(--dark-grayish-blue);
+  padding: 2rem 2rem 0rem 2rem;
+  border-radius: 1rem;
+  width: 480px;
+}
+
+/* used h1 for the advice number at top but made it small anyways */
+/* used letter spacing to give more space in letters ha */
+.container h1 {
+  color: var(--neon-green);
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  font-size: 14px;
+  margin-bottom: 1rem;
+}
+
+.container p {
+  margin-bottom: 2rem;
+  color: var(--light-cyan);
+}
+
+.container picture img {
+  color: #4F5D74;
+  width: 90%;
+}
+
+.container picture {
+  display: flex;
+  justify-content: center;
+  color: var(--light-cyan);
+}
+
+.container button {
+  background-color: var(--neon-green);
+  padding: 1.25rem;
+  border: none;
+  border-radius: 50%;
+  transition: 0.2s all;
+  cursor: pointer;
+  position: relative;
+  top: 35px;
+}
+
+.container button:hover {
+  background-color: hsl(150, 48%, 41%);;
+}
+
+.container button:active {
+  background-color: var(--neon-green);
+  border-radius: 50%;
+  box-shadow: 0 0 50px var(--neon-green);
+}
+
+.attribution {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 5rem;
+  color: var(--light-cyan);
+}
+
+/* give behavior on transitions */
+.attribution a {
+  color: hsl(228, 52%, 55%);
+  transition: color 0.3s ease-in-out;
+}
+
+/* give color on hover */
+.attribution a:hover {
+  color: hsl(228, 41%, 46%);
 }
